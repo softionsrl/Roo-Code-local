@@ -183,17 +183,17 @@ export async function browserActionTool(
 
 				cline.consecutiveMistakeCount = 0
 
-				await cline.say(
-					"browser_action",
-					JSON.stringify({
-						action: action as BrowserAction,
-						coordinate,
-						text,
-						size,
-					} satisfies ClineSayBrowserAction),
-					undefined,
-					false,
-				)
+				// Prepare say payload; include executedCoordinate for pointer actions
+				const sayPayload: ClineSayBrowserAction & { executedCoordinate?: string } = {
+					action: action as BrowserAction,
+					coordinate,
+					text,
+					size,
+				}
+				if ((action === "click" || action === "hover") && processedCoordinate) {
+					sayPayload.executedCoordinate = processedCoordinate
+				}
+				await cline.say("browser_action", JSON.stringify(sayPayload), undefined, false)
 
 				switch (action) {
 					case "click":
