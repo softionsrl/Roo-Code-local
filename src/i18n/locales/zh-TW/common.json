@@ -93,6 +93,16 @@
 			"apiKeyModelPlanMismatch": "API 金鑰和訂閱方案允許不同的模型。請確保所選模型包含在您的方案中。",
 			"notFound": "找不到 Claude Code 可執行檔案 '{{claudePath}}'。\n\n請安裝 Claude Code CLI：\n1. 造訪 {{installationUrl}} 下載 Claude Code\n2. 依照作業系統的安裝說明進行操作\n3. 確保 'claude' 指令在 PATH 中可用\n4. 或者在 Roo 設定中的 'Claude Code 路徑' 下設定自訂路徑\n\n原始錯誤：{{originalError}}"
 		},
+		"geminiCli": {
+			"oauthLoadFailed": "無法載入 OAuth 憑證。請先進行驗證：{{error}}",
+			"tokenRefreshFailed": "無法重新整理 OAuth 權杖：{{error}}",
+			"onboardingTimeout": "新手導引操作在 60 秒後逾時。請稍後再試。",
+			"projectDiscoveryFailed": "無法發現專案 ID。請確保您已使用 'gemini auth' 進行驗證。",
+			"rateLimitExceeded": "超過速率限制。已達到免費層級限制。",
+			"badRequest": "錯誤的請求：{{details}}",
+			"apiError": "Gemini CLI API 錯誤：{{error}}",
+			"completionError": "Gemini CLI 完成錯誤：{{error}}"
+		},
 		"message": {
 			"no_active_task_to_delete": "沒有可刪除訊息的活躍工作",
 			"invalid_timestamp_for_deletion": "刪除操作的訊息時間戳無效",
