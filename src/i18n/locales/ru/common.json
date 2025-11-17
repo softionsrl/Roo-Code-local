@@ -103,6 +103,16 @@
 			"error_deleting_message": "Ошибка удаления сообщения: {{error}}",
 			"error_editing_message": "Ошибка редактирования сообщения: {{error}}"
 		},
+		"geminiCli": {
+			"oauthLoadFailed": "Не удалось загрузить учетные данные OAuth. Сначала выполните аутентификацию: {{error}}",
+			"tokenRefreshFailed": "Не удалось обновить токен OAuth: {{error}}",
+			"onboardingTimeout": "Операция подключения истекла через 60 секунд. Пожалуйста, попробуйте позже.",
+			"projectDiscoveryFailed": "Не удалось обнаружить идентификатор проекта. Убедитесь, что вы аутентифицированы с помощью 'gemini auth'.",
+			"rateLimitExceeded": "Превышен лимит скорости. Достигнуты лимиты бесплатного уровня.",
+			"badRequest": "Неверный запрос: {{details}}",
+			"apiError": "Ошибка API Gemini CLI: {{error}}",
+			"completionError": "Ошибка завершения Gemini CLI: {{error}}"
+		},
 		"gemini": {
 			"generate_stream": "Ошибка потока контекста генерации Gemini: {{error}}",
 			"generate_complete_prompt": "Ошибка завершения Gemini: {{error}}",

@@ -94,6 +94,16 @@
 			"apiKeyModelPlanMismatch": "API keys and subscription plans allow different models. Make sure the selected model is included in your plan.",
 			"notFound": "Claude Code executable '{{claudePath}}' not found.\n\nPlease install Claude Code CLI:\n1. Visit {{installationUrl}} to download Claude Code\n2. Follow the installation instructions for your operating system\n3. Ensure the 'claude' command is available in your PATH\n4. Alternatively, configure a custom path in Roo settings under 'Claude Code Path'\n\nOriginal error: {{originalError}}"
 		},
+		"geminiCli": {
+			"oauthLoadFailed": "OAuth क्रेडेंशियल लोड करने में विफल। कृपया पहले प्रमाणीकरण करें: {{error}}",
+			"tokenRefreshFailed": "OAuth टोकन रीफ्रेश करने में विफल: {{error}}",
+			"onboardingTimeout": "ऑनबोर्डिंग ऑपरेशन 60 सेकंड बाद टाइमआउट हो गया। कृपया बाद में पुनः प्रयास करें।",
+			"projectDiscoveryFailed": "प्रोजेक्ट ID खोजने में असमर्थ। सुनिश्चित करें कि आप 'gemini auth' के साथ प्रमाणित हैं।",
+			"rateLimitExceeded": "दर सीमा पार हो गई। मुफ्त टियर की सीमा पहुंच गई है।",
+			"badRequest": "गलत अनुरोध: {{details}}",
+			"apiError": "Gemini CLI API त्रुटि: {{error}}",
+			"completionError": "Gemini CLI पूर्णता त्रुटि: {{error}}"
+		},
 		"message": {
 			"no_active_task_to_delete": "संदेशों को हटाने के लिए कोई सक्रिय कार्य नहीं",
 			"invalid_timestamp_for_deletion": "हटाने के लिए अमान्य संदेश टाइमस्टैम्प",
