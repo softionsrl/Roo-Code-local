@@ -43,6 +43,7 @@ import {
 	VercelAiGatewayHandler,
 	DeepInfraHandler,
 	MiniMaxHandler,
+	BasetenHandler,
 } from "./providers"
 import { NativeOllamaHandler } from "./providers/native-ollama"
 
@@ -89,6 +90,13 @@ export interface ApiHandlerCreateMessageMetadata {
 	 * Used by providers to determine whether to include native tool definitions.
 	 */
 	toolProtocol?: ToolProtocol
+	/**
+	 * Controls whether the model can return multiple tool calls in a single response.
+	 * When true, parallel tool calls are enabled (OpenAI's parallel_tool_calls=true).
+	 * When false (default), only one tool call is returned per response.
+	 * Only applies when toolProtocol is "native".
+	 */
+	parallelToolCalls?: boolean
 }
 
 export interface ApiHandler {
@@ -193,6 +201,8 @@ export function buildApiHandler(configuration: ProviderSettings): ApiHandler {
 			return new VercelAiGatewayHandler(options)
 		case "minimax":
 			return new MiniMaxHandler(options)
+		case "baseten":
+			return new BasetenHandler(options)
 		default:
 			apiProvider satisfies "gemini-cli" | undefined
 			return new AnthropicHandler(options)
